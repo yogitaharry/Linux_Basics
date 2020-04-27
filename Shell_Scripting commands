@@ -39,6 +39,16 @@ route -n  ; gateway ?
 netstats -antp | grep 
 LVM  RAID
 df du  dd tr  chage 
+rsync 
+locate
+hard and soft link
+tar zip
+user info and login info
+/var/log/messages  /var/dmsg /var/log/secure  /var/log/cron
+systemctl
+port mapping
+
+
 
 
 
