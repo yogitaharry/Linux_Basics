@@ -1,0 +1,286 @@
+Path :
+
+Absolute path :  or known as full path : starts from root dir (/)
+command to check your path : #pwd
+                            /etc/harry/files/
+
+Relative path : or current path 
+                  /harry/files/
+                  
+ ==================================================================
+ #pwd : use to show your current dir/path 
+ /var/log/messages
+ 
+==================================================================
+touch : to create empty dir (simgle or multiple both the way)
+#touch file1
+#ls 
+touch file2 file3 file4 
+#ls
+ 
+ ===================
+ rm : to delete empty files (single or multiple)
+ #rm file1 
+ #rm file2 file3
+ NOTE : cant delete non-empty files , whats the solution ? > use # rm -rf file4
+ ===========================================================
+ mkdir : use to create empty dir 
+ mkdir -p : use to create multiple dir one inside another , recursively 
+ 
+ mkdir dir1 
+ mkdir -p dir1/dir2/dir3/dir4
+ 
+ rmdir dir4
+ rmdir dir2  error coz non empty dir  whats the solution ? > use  rm -rf dir2
+ ==============================================================
+ 
+ history 
+ !!      last cmd
+ !12     12th cmd
+ !p      command start with p lastly executed
+ 
+ history -c   clear history
+ 
+ ==================================================================
+ hostname       show shortname
+ hostname -f    show FQDN
+ hostname -i    show IP
+  hostname -F /etc/hostname 
+  hostnamectl  set-hostname  harry.singh.com  --static           set hostname
+ 
+ service syslog restart    to run sys log with new hostname
+ ===============================================================
+ file : to get filetype
+ # ls -ltr
+ drwxrwxrwx  2  root root  timestamp   harry.txt
+ d=dir - = regular file ; c = char file ; b=block device ; 
+ 
+ #file harry
+ 
+ ========================================================
+ echo : used to show env variable valuses or print or edit something in files
+ 
+ #echo harry 
+ #echo $SHELL
+ #echo 1 > /proc/sys/net/ip4/ip_forwarding
+ #echo 20 > /proc/
+ #echo harry > harry.txt
+ ============================================================
+ cat : to print or edit or append files
+ 
+ #cat harry.txt
+ #cat > harry.txt
+ #cat >> harry.txt
+ #cat abc.txt > harry.txt
+ #cat abc.txt >> harry.txt
+ =============================================================
+ ls : to list file/dir 
+ 
+ #ls
+ #ls -l
+ #ls -ltr    show permissions , metadata along with file/dir in reverse modified timestamp
+ #ls -a
+ #ls -d  = l.
+ #ls -lz
+ #ls -lh
+ #ls -t
+ #ls -tr
+==============================================================
+ cp : copy file/dir from one path to another path  :  cpSD
+ 
+ # cp file1  /etc/harry
+ # cp /etc/harry/file1  /etc/singh/
+ # cp /etc/harry  .
+ # cp .  /etc/harry/
+ 
+ non empty folders :
+ # cp -R /etc/harry/  .
+ # cp -R .  /etc/harry
+ 
+ Create backup before copying:
+ # cp --backup  /etc/harry/file1  /tmp/harry
+ 
+ hardlink and softlink by cp command :
+ # cp -s  /etc/harry  /tmp/singh
+ # cp -l /etc/harry  /tmp/singh
+ 
+ copy hidden files also :
+ #cp -a  src  dest
+ 
+ 
+ =========================================================
+ more : old ,  less = new work arrows and enter also
+ 
+ 
+ 
+ ========================================================
+ tail : use to see logs/text of flie with last 10 lines by default
+ head : use to see logs with first 10 lines by default
+ 
+ # tail /var/log/messages  
+ # tail -n 25  /var/log/messages
+ # tail -f /var/log/messages    check running logs
+ 
+ # head /var/log/messages
+ # head -n 20 /var/log/messages
+ 
+ ============================================================
+ watch : use to see runtime logs , work as watchdog on your set file
+ 
+ watch 
+ 
+ ===========================================================
+ sort : use to sort output of file per your requirements , not edited actual file 
+ 
+ sort -n 20  harry.txt
+ 
+ 
+ ==========================================================
+ uniq  : shoq uniqe output , remove dublicates 
+ 
+ 
+ 
+ =============================================================
+ ifconfig : use to see n/w config like IP , subnet , g/w , LAN connected , how many NIC , 
+ Ip addr
+ ip a
+ 
+ if eth1 up/down
+ 
+ =========================================================
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
