@@ -1,0 +1,82 @@
+Paths
+pwd
+touch  rm  rm -rf
+mkdir  rmdir
+history
+hostname  hostname ctl  /etc/hosts  
+file
+echo  vim  cat  ls
+cp mv scp ssh
+head tail more less sort uniq
+ifconfig  ip addr ip a  if eth0 up/down   arp
+dig  /etc/hosts  /etc/resolv.conf
+uptime who -b  top  w 
+runlevel  /etc/inittab  init 3  shell  /etc/shell
+wget curl tar
+alias
+id  whoami groups  /etc/passwd  /etc/shadow  /etc/groups  /etc/gshdaow
+grep  find  sed  awk  cut
+uname /etc/os-releas  
+top  vmstat  sar  free
+fdisk partprobe  parted mkfs.ext3  mount  /etc/fstab  xfs_growfs  YAST
+chmod  chgrp chwon chattr lsattr
+/etc/passwd  /etc/shadow  /etc/group  /etc/gshadow
+suid  sgid  stickbit umask acl 
+iptables  selinux  firewalld netstat
+ps  kill lsof 
+updatedb
+timezone  mail  
+rpm  yum 
+useradd passwd  groupadd groupmod
+/etc/shh/sshd_conf   id_rsa
+users : super , system , normal 
+blkid 
+env  inodes  
+at  crontab 
+/etc/sudoers  /etc/ssh/sshd_conf
+/etc/hosts  /etc/sysconfig/network  /etc/syscoonfig_network/network_scripts 
+route -n  ; gateway ?
+netstats -antp | grep 
+LVM  RAID
+df du  dd tr  chage 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
