@@ -1,0 +1,17 @@
+============================================================
+cat /etc/hosts
+cat /etc/hostname
+#hostnamectl  set-hostname FQDN.in  --static
+#hostname -F  /etc/hostname
+#hostname -i 
+#hostname -f
+============================================================
+#cat curl
+#curl www.facebook.com
+#curl -L www.facebook.com
+#curl -I www.facebook.com
+#curl -o  web_content.tar  https://www.facebook.com/
+curl -z 04-jan-2019  https://www.facebook.com/
+=============================================================
+
+
