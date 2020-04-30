@@ -1,0 +1,104 @@
+Find Grep Awk Sed Vim = These are text editor or searching tools as well
+
+Find :
+
+#find path  -iname  filename
+#find . -iname harry.txt
+ find /etc -iname ".txt"
+ 
+# find /etc -iname harry.txt -exec chmod 777 {} \ ;
+# find . -iname sample.pdf -exec rm -rf {} \;
+# find /etc -iname -exec mv /tmp {} \;
+
+# find . -perm 660
+
+# find /tmp -user harry
+  find . -group harry
+  
+# find . -size 10M
+
+# find . -maxdepth 2 -iname sample.txt
+==============================================================
+
+Grep :
+
+#grep -i harry  /etc
+#grep -v harry /etc
+#grep -E "unix|linux" /etc
+#grep -e "unix" -e "linux" /etc
+#grep -A 2 harry /etc
+#grep -B 3 harry /etc
+#grep -C 2  harry  /etc
+
+#cat /etc/sudoers  | grep -t harry
+#ps -ef | grep -i apache
+
+
+==============================================================
+
+Awk :
+
+#awk '{print $0}' file.txt
+#awk '{print $1,$3}' file.txt
+#awk -F":" '{print $1,$3,$5 }' /etc/passwd
+echo "Hello harry singh" >> awk '{"$2=yogita" ; print $01}'
+#awk '{$3=sisodiya ; print $0}' /etc/harry.txt
+
+
+
+===============================================================
+sed :
+
+#sed ' / /g' filename      To replace word
+#sed '2p' filename        To print line but with while file 
+ sed -n '2p'  filename    To print specific line
+ ------------------------------------------------------------
+#sed -n '2,5p' harry.txt
+#sed  -n '2.6!p' harry.txt
+#sed 'S/day/night/g' harry.txt
+#sed '/[cC]omputer/p' harry.txt
+#sed '/[cC]omputer/w  file.txt' harry.txt
+#sed  -e '/electro/w  file1.txt'  -e '/computer/w  file2.txt ' harry.txt
+
+
+--------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
