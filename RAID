@@ -1,0 +1,106 @@
+RAID =  Redundant array independent disk
+        Its a data storage scheme , use to save data across multiple hard disk.
+        Collectively treat multiple HD as single HD.
+        Its a tech. to divide & replicate among multiple physical drives/disk.
+---------------------------------------------------------------------------------
+RAID have below 6 schemes :
+RAID 0            disk stripping
+RAID 1            disk mirroring
+RAID 4/5/6        disk stripping with parity
+RAID 10           RAID 0 + RAID1
+---------------------------------------------------------------------------------
+Schemes provide below functionality :
+    1. increase data reliability
+    2. increase I/O operation
+    3. increase flexibility
+    4. fault tolerance
+
+--------------------------------------------------------------------------------------------------
+
+RAID 0 :
+        Min 2 disk required , 
+        Data store on mulitple disks so if one fails then data lost.
+
+mdadm   --create    /dev/md0    --level=0   --raid-level=3   /dev/sdb1  /dev/sdc1/  /dev/sdd1
+
+mdadm  --detail  /dev/md0
+
+partprobe  /dev/md0
+mkdir   /RAID0
+mkfs.ext4  /dev/md0
+mount /dev/md0  /RAID0                  OR  (  vim /etc/fstab  ::  /dev/md0  /RAID0  ext4   defaults,   0     0  )
+df -Th
+
+---------
+ umount  /RAID0
+ mdadm  --stop  /dev/md0
+ mdadm  --detail  /dev/md0
+ 
+ 
+ ======================================================================================================
+ RAID1 : Disk mirroring 
+         provide data redundency , faster I/O , one disk fail still no data loss
+         
+ mdadm  --create  /dev/md1   --level=1   --raid-device=2   /dev/sdb1   /dev/sdc1
+ mdamd  --detail /dev/md1
+ 
+ partprobe  /dev/md1
+ mkdir  /RAID1
+ mkfs.ext4   /dev/md1   /RAID1
+ 
+ mount  /dev/md1   /RAID1               OR   (  vim /etc/fstab   ::   /dev/md1   /RAID1   ext4   defaults   0  0  )
+ df -Th
+ 
+ --------------------
+ umount /RAID
+ mdadm  --detail  /dev/md1
+ mdadm   --stop   /dev/md1
+ mdadm   --detail  /dev/md1
+ 
+ 
+ ================================================================================================
+ GROW &  Reduce RAID :
+ 
+ GROW RAID :
+          NO DT required . Add new HD
+          
+          mdadm   --add  /dev/md0   /dev/sde1
+          mdadm  --grow /dev/md0  --raid-device=4
+          mdadm  --detail   /dev/md0
+          
+          
+          
+Reduce RAID :
+         DT required , Remove Faulty disk and add new disk to raid at that place 
+         
+         mdadm  --detail  /dev/md1
+            2 partitions listed
+            
+         mdadm     --fail  /dev/md1   /dev/sdb1
+         mdadm     --remove  /dev/md1   /dev/sdb1
+         mdadm  --add  /dev/md1   /dev/sdc1
+         
+         mdadm   --detail  /dev/md1
+         
+ ====================================================================================================
+          
+          
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
